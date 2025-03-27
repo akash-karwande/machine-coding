@@ -1,0 +1,44 @@
+.logo {
+    width: 120px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    font-size: 24px;
+}
+.nav-list li {
+    margin: 0 10px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.food-img {
+    width: 190px;
+}
+
+.container {
+    padding: 5px;
+  }
+  
+  .expand-icon {
+    cursor: pointer;
+  }
+  .icon {
+    padding: 2px;
+    margin: 3px;
+    font-size: 10px;
+  }
