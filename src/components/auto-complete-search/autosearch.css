@@ -1,0 +1,23 @@
+.search-input {
+    padding: 5px;
+    width: 350px;
+}
+
+.auto-complete-container {
+    width: 350px;
+    padding: 5px;
+}
+.result-container {
+    width: 350px;
+    padding: 5px;
+    border: 1px solid black;
+    max-height: 180px;
+    overflow-y: auto;
+}
+.result {
+    display: block;
+    padding: 3px;
+}
+.result:hover {
+    background-color: lightgray;
+}

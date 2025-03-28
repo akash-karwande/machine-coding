@@ -1,3 +1,4 @@
+import AutoComplete from "./auto-complete-search/AutoComplete";
 import FileExplorer from "./file-explorer/FileExplorer";
 import ProgressBar from "./ProgressBar/ProgressBar";
 
@@ -13,6 +14,9 @@ const Body = () => {
         </div>
         <div className="card">
           <ProgressBar />
+        </div>
+        <div className="card">
+          <AutoComplete />
         </div>
       </div>
     </div>
