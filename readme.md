@@ -24,4 +24,19 @@
   6. Add onFocus and onBlur event on input to  show and hide result container
   7. Implement debouncing to reduce api calls
   8. Create state variable for caching to prevent api call when user press back space
+
+# Pagination
+  1. Fetch the data and display on UI
+  2. Calculate number of pages i.e length of products / page size
+  3. Create numbers by using [...Array(noofPages).keys()].map and display it
+  4. Calculate the start and end for slice method(it will make the copy of an array).
+  5. start = currentPage * pageSize
+  6. end = start + pageSize
+  7. Add Click handler on numbers and set the currentPage value
+  8. Add active class on selected page
+  9. Add Prev and Next buttons and handle click on them
+  10. Add egde cases on next and prev buttons.
+
+  
+
   

@@ -5,7 +5,7 @@ import ProgressBar from "./ProgressBar/ProgressBar";
 import Pagination from "./pagination/Pagination";
 
 const Body = () => {
-  const [activeApp, setActiveApp] = useState("");
+  const [activeApp, setActiveApp] = useState("ProgressBar");
   const setApp = (app) => {
     setActiveApp(app);
   };
