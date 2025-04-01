@@ -18,3 +18,10 @@
     display: block;
     text-align: center;
 }
+.page-number {
+    padding: 3px 7px;
+    margin: 3px;
+}
+.page-number.active {
+    background-color: lightblue;
+}

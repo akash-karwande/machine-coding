@@ -1,11 +1,11 @@
 import { useState } from "react";
 import AutoComplete from "./auto-complete-search/AutoComplete";
 import FileExplorer from "./file-explorer/FileExplorer";
-import Pagination from "./pagination/pagination";
 import ProgressBar from "./ProgressBar/ProgressBar";
+import Pagination from "./pagination/Pagination";
 
 const Body = () => {
-  const [activeApp, setActiveApp] = useState("ProgressBar");
+  const [activeApp, setActiveApp] = useState("");
   const setApp = (app) => {
     setActiveApp(app);
   };
@@ -30,6 +30,7 @@ const Body = () => {
       </div>
       <div className="card-container">
         <div className="card">
+        {/* <Pagination /> */}
           {activeApp == "FileExplorer" && <FileExplorer />}
           {activeApp == "ProgressBar" && <ProgressBar />}
           {activeApp == "AutoComplete" && <AutoComplete />}

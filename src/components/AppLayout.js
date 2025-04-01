@@ -4,7 +4,7 @@ import Body from "./Body";
 const AppLayout = () => {
     return (
         <div className="app-layout">
-            <Header />
+            {/* <Header /> */}
             <Body />
         </div>
     )
