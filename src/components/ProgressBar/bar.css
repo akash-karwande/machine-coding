@@ -1,7 +1,7 @@
 .bar-container {
     border: 1px solid black;
     border-radius: 15px;
-    margin: 5px 0;
+    margin: 15px;
     overflow: hidden;
 }
 
@@ -9,7 +9,7 @@
     background-color: green;
     color: white;
     text-align: right;
-    font-size: 10px;
+    font-size: 15px;
     transition: 0.5s ease-in;
 }
 

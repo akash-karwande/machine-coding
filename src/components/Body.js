@@ -1,22 +1,39 @@
+import { useState } from "react";
 import AutoComplete from "./auto-complete-search/AutoComplete";
 import FileExplorer from "./file-explorer/FileExplorer";
+import Pagination from "./pagination/pagination";
 import ProgressBar from "./ProgressBar/ProgressBar";
 
 const Body = () => {
+  const [activeApp, setActiveApp] = useState("ProgressBar");
+  const setApp = (app) => {
+    setActiveApp(app);
+  };
+
   return (
     <div className="body">
       <div className="search">
-        <input type="text" placeholder="Search" />
+        <ul className="app-list">
+          <li className={`list-item ${activeApp == "FileExplorer"? 'active': ''}`} onClick={() => setApp("FileExplorer")}>
+            File Explorer
+          </li>
+          <li className={`list-item ${activeApp == "ProgressBar"? 'active': ''}`} onClick={() => setApp("ProgressBar")}>
+            Progress Bar
+          </li>
+          <li className={`list-item ${activeApp == "AutoComplete"? 'active': ''}`} onClick={() => setApp("AutoComplete")}>
+            Autocomplete
+          </li>
+          <li className={`list-item ${activeApp == "Pagination"? 'active': ''}`} onClick={() => setApp("Pagination")}>
+            Pagination
+          </li>
+        </ul>
       </div>
       <div className="card-container">
         <div className="card">
-          <FileExplorer />
-        </div>
-        <div className="card">
-          <ProgressBar />
-        </div>
-        <div className="card">
-          <AutoComplete />
+          {activeApp == "FileExplorer" && <FileExplorer />}
+          {activeApp == "ProgressBar" && <ProgressBar />}
+          {activeApp == "AutoComplete" && <AutoComplete />}
+          {activeApp == "Pagination" && <Pagination />}
         </div>
       </div>
     </div>
