@@ -5,36 +5,44 @@ import ProgressBar from "./ProgressBar/ProgressBar";
 import Pagination from "./pagination/Pagination";
 
 const Body = () => {
-  const [activeApp, setActiveApp] = useState("ProgressBar");
-  const setApp = (app) => {
-    setActiveApp(app);
+  const [apps, setApps] = useState([
+    {
+      name: 'File Explorer',
+      component: FileExplorer
+    },
+    {
+      name: 'Progress Bar',
+      component: ProgressBar
+    },
+    {
+      name: 'Auto Complete Search',
+      component: AutoComplete
+    },
+    {
+      name: 'Pagination',
+      component: Pagination
+    }
+  ]);
+  
+  const [activeApp, setActiveApp] = useState(0);
+  const ActiveComponent = apps[activeApp].component;
+
+  const setApp = (index) => {
+    setActiveApp(index);
   };
 
   return (
     <div className="body">
       <div className="search">
         <ul className="app-list">
-          <li className={`list-item ${activeApp == "FileExplorer"? 'active': ''}`} onClick={() => setApp("FileExplorer")}>
-            File Explorer
-          </li>
-          <li className={`list-item ${activeApp == "ProgressBar"? 'active': ''}`} onClick={() => setApp("ProgressBar")}>
-            Progress Bar
-          </li>
-          <li className={`list-item ${activeApp == "AutoComplete"? 'active': ''}`} onClick={() => setApp("AutoComplete")}>
-            Autocomplete
-          </li>
-          <li className={`list-item ${activeApp == "Pagination"? 'active': ''}`} onClick={() => setApp("Pagination")}>
-            Pagination
-          </li>
+          {apps.map((app, index) => <li key={index} className={`list-item ${activeApp == index? 'active': ''}`} onClick={() => setApp(index)}>
+            {app.name}
+          </li>)}
         </ul>
       </div>
       <div className="card-container">
         <div className="card">
-        {/* <Pagination /> */}
-          {activeApp == "FileExplorer" && <FileExplorer />}
-          {activeApp == "ProgressBar" && <ProgressBar />}
-          {activeApp == "AutoComplete" && <AutoComplete />}
-          {activeApp == "Pagination" && <Pagination />}
+            <ActiveComponent />
         </div>
       </div>
     </div>
