@@ -3,6 +3,7 @@ import AutoComplete from "./auto-complete-search/AutoComplete";
 import FileExplorer from "./file-explorer/FileExplorer";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import Pagination from "./pagination/Pagination";
+import TabForm from "./tab-form/TabForm";
 
 const Body = () => {
   const [apps, setApps] = useState([
@@ -21,9 +22,13 @@ const Body = () => {
     {
       name: 'Pagination',
       component: Pagination
+    },
+    {
+      name: 'Tab Form',
+      component: TabForm
     }
   ]);
-  
+
   const [activeApp, setActiveApp] = useState(0);
   const ActiveComponent = apps[activeApp].component;
 

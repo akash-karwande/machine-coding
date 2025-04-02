@@ -1,0 +1,45 @@
+.tab-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.tab-list li {
+    border: 1px solid #000;
+    margin: 0 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+
+}
+.tab-list li.active {
+    background-color: lightblue;
+}
+.tab-content {
+    border: 1px solid black;
+    height: 200px;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+.input {
+    padding: 5px;
+    margin: 10px;
+}
+.input input {
+    padding: 10px;
+    width: 230px;
+}
+
+.submit-footer {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.submit-footer button {
+    background: green;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 0 3px;
+}
