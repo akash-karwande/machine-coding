@@ -5,8 +5,6 @@ import Settings from "./Settings";
 import "./tabForm.css";
 
 const TabForm = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [errors, setErrors] = useState({});
   const [data, setData] = useState({
     name: "Akash",
     age: 30,
@@ -14,6 +12,9 @@ const TabForm = () => {
     interest: ["coding", "music"],
     theme: "dark",
   });
+  const [activeTab, setActiveTab] = useState(0);
+  const [errors, setErrors] = useState({});
+
   const [tabs, setTabs] = useState([
     {
       name: "Profile",
