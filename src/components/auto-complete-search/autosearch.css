@@ -6,6 +6,7 @@
 .auto-complete-container {
     width: 350px;
     padding: 5px;
+    margin: auto;
 }
 .result-container {
     width: 350px;
