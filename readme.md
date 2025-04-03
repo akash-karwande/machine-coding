@@ -37,6 +37,20 @@
   9. Add Prev and Next buttons and handle click on them
   10. Add egde cases on next and prev buttons.
 
+
+# Tab Form and validations
+  1. Create All components
+  2. In parent component create tabData like {name: Profile, component: Profile}
+  3. Create state variable for active tab with initial value 0
+  4. Get the active component by using tabData[activeTab].component
+  5. Map through tabData and create tabs, it will create tab functionality
+  6. Pass ActiveTabComponent to initial json data and setter function as props
+  7. Create indiviual form component and map value to json and set State using setter function
+  8. Add Submit, next and prev buttons 
+  9. For error handling create state variable like {name: 'invalid name'}
+  10. Add validate method in tabData and fill error obj and return true or false {name: Profile, component: Profile, validate: () => {}}
+
+
   
 
   
