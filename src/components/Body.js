@@ -46,7 +46,7 @@ const Body = () => {
       <div className="search">
         <ul className="app-list">
           {apps.map((app, index) => <li key={index} className={`list-item ${activeApp == index? 'active': ''}`} onClick={() => setApp(index)}>
-            {app.name}
+            {app.name} {apps.length -1 !== index && <span className="divider"> | </span>}
           </li>)}
         </ul>
       </div>

@@ -48,6 +48,10 @@
     cursor: pointer;
     margin: 0 7px;
   }
+  .divider {
+    color: #00000063;
+    margin-left: 7px;
+  }
   .list-item:hover {
     color: lightblue;
   }
