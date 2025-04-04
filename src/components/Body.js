@@ -4,6 +4,7 @@ import FileExplorer from "./file-explorer/FileExplorer";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import Pagination from "./pagination/Pagination";
 import TabForm from "./tab-form/TabForm";
+import OtpInput from "./otp-input/OtpInput";
 
 const Body = () => {
   const [apps, setApps] = useState([
@@ -26,6 +27,10 @@ const Body = () => {
     {
       name: 'Tab Form',
       component: TabForm
+    },
+    {
+      name: 'OTP Input',
+      component: OtpInput
     }
   ]);
 
