@@ -9,6 +9,10 @@ import OtpInput from "./otp-input/OtpInput";
 const Body = () => {
   const [apps, setApps] = useState([
     {
+      name: 'OTP Input',
+      component: OtpInput
+    },
+    {
       name: 'File Explorer',
       component: FileExplorer
     },
@@ -27,10 +31,6 @@ const Body = () => {
     {
       name: 'Tab Form',
       component: TabForm
-    },
-    {
-      name: 'OTP Input',
-      component: OtpInput
     }
   ]);
 

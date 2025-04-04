@@ -51,6 +51,21 @@
   10. Add validate method in tabData and fill error obj and return true or false {name: Profile, component: Profile, validate: () => {}}
 
 
+# OTP Input Validations
+ 1. Create state Variable with initial value 'new Array(digitSize).fill('')'
+ 2. Map inputArr in jsx and add onchange handler
+ 3. Create ref variable with initial value as []
+ 4. Map input with ref var like ref={(currentInput) => (inputRefArr.current[index] = currentInput)}
+ 5. In onchange create new arr and than update the state
+ 6. After updating state focus on next input by using ref like "newValue && inputRefArr.current[index + 1]?.focus()"
+ 7. Add onKeyDown event on input pass event and index to handler
+ 8. In onKeyDown handler check if e.key == "Backspace" and !e.target.value
+ 9. If condition passes focus on previous input by using ref like inputRefArr.current[index -1]?.focus();
+ 10. Add useEffect to add focus on 1st input on page component load.
+ 11. To get last entered input use slice(-1) and also trim the value in onchange handler
+
+
+
   
 
   
