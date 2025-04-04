@@ -1,5 +1,5 @@
 import './otpinput.css';
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const OtpInput = () => {
   const OTP_SIZE = 5;
@@ -20,6 +20,10 @@ const OtpInput = () => {
         inputRefArr.current[index -1]?.focus();
     }
   }
+
+  useEffect(()=>{
+    inputRefArr.current[0].focus();
+  }, [])
 
   return (
     <div className="otp-input-container">

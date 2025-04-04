@@ -53,10 +53,11 @@
     margin-left: 7px;
   }
   .list-item:hover {
-    color: lightblue;
+    color: #1b41e2;
+    opacity: 0.5;
   }
 
   .list-item.active {
-    color: lightblue;
+    color: #1b41e2;
     cursor: no-drop;
   }
