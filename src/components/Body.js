@@ -1,10 +1,11 @@
-import { useState } from "react";
-import AutoComplete from "./auto-complete-search/AutoComplete";
-import FileExplorer from "./file-explorer/FileExplorer";
-import ProgressBar from "./ProgressBar/ProgressBar";
-import Pagination from "./pagination/Pagination";
-import TabForm from "./tab-form/TabForm";
-import OtpInput from "./otp-input/OtpInput";
+import React, { useState, Suspense } from "react";
+
+const OtpInput = React.lazy(() => import('./otp-input/OtpInput'));
+const AutoComplete = React.lazy(() => import('./auto-complete-search/AutoComplete'));
+const FileExplorer = React.lazy(() => import('./file-explorer/FileExplorer'));
+const ProgressBar = React.lazy(() => import('./ProgressBar/ProgressBar'));
+const Pagination = React.lazy(() => import('./pagination/Pagination'));
+const TabForm = React.lazy(() => import('./tab-form/TabForm'));
 
 const Body = () => {
   const apps = [
@@ -52,7 +53,9 @@ const Body = () => {
       </div>
       <div className="card-container">
         <div className="card">
-          <ActiveComponent />
+          <Suspense fallback={<p>Loading...</p>}>
+            <ActiveComponent />
+          </Suspense>
         </div>
       </div>
     </div>
