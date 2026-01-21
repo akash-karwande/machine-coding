@@ -7,7 +7,7 @@ import TabForm from "./tab-form/TabForm";
 import OtpInput from "./otp-input/OtpInput";
 
 const Body = () => {
-  const [apps, setApps] = useState([
+  const apps = [
     {
       name: 'OTP Input',
       component: OtpInput
@@ -32,7 +32,7 @@ const Body = () => {
       name: 'Tab Form',
       component: TabForm
     }
-  ]);
+  ];
 
   const [activeApp, setActiveApp] = useState(0);
   const ActiveComponent = apps[activeApp].component;
@@ -45,14 +45,14 @@ const Body = () => {
     <div className="body">
       <div className="search">
         <ul className="app-list">
-          {apps.map((app, index) => <li key={index} className={`list-item ${activeApp == index? 'active': ''}`} onClick={() => setApp(index)}>
-            {app.name} {apps.length -1 !== index && <span className="divider"> | </span>}
+          {apps.map((app, index) => <li key={index} className={`list-item ${activeApp == index ? 'active' : ''}`} onClick={() => setApp(index)}>
+            {app.name} {apps.length - 1 !== index && <span className="divider"> | </span>}
           </li>)}
         </ul>
       </div>
       <div className="card-container">
         <div className="card">
-            <ActiveComponent />
+          <ActiveComponent />
         </div>
       </div>
     </div>
